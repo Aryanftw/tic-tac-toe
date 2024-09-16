@@ -32,7 +32,9 @@ export default function Row() {
   return (
     <>
       {isWinner ? (
-        <>{isWinner} won the game !</>
+        <>{isWinner} won the game ! <button onClick = {() => {
+          setState(Array(9).fill(null));
+        }}>Play Again</button></>
       ) : (
         <>
           <div className='row-container'>
